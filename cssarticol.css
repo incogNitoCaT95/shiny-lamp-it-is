@@ -1,0 +1,33 @@
+.textpagina{
+	text-align: justify;
+    -moz-text-align-last: left; /* Code for Firefox */
+    text-align-last: left;
+	margin-left:3%;
+	margin-right:3%;
+}
+.txtbox{
+background-color: #ecc6c6;
+width:90%;
+height: auto;
+margin-left:auto;
+margin-right:auto;
+padding: 20px; 
+	
+}
+
+
+
+.polaroid {
+    width: 50%;
+    background-color: #d27979;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+	left:25%;
+}
+
+
+
+.container1 {
+    text-align: center;
+    padding: 10px 20px;
+}

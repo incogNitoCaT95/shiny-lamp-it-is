@@ -1,0 +1,34 @@
+.polaroid1{
+    width: 75%;
+
+    background-color: white;
+    box-shadow: 0 0 0 0 ;
+ 	position: relative;
+ left:10%;
+}
+
+.polaroid3{
+    width: 75%;
+    background-color: white;
+    box-shadow: 0 0 0 0 ;
+ position: relative;
+ left:10%;
+}
+
+.polaroid2{
+    width: 75%;
+    background-color: white;
+    box-shadow: 0 0 0 0 ;
+ position: relative;
+ left:10%;
+}
+
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+.container1 {
+    text-align: center;
+    padding: 0px 0px;
+}
