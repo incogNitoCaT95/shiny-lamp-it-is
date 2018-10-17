@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
     <meta name="description" content="Atestat">
     <meta name="author" content="Olivia&Teodora">
-    <link rel="icon" href="logofinal.png">
-    <link rel="stylesheet" type="text/css" href="cursor.css">
-    <link rel="stylesheet" type="text/css" href="id.css">
-    <link rel="stylesheet" type="text/css" href="cssarticol.css">
+    <link rel="icon" href="/images/logofinal.png">
+    <link rel="stylesheet" type="text/css" href="/css/cursor.css">
+    <link rel="stylesheet" type="text/css" href="/css/id.css">
+    <link rel="stylesheet" type="text/css" href="/css/cssarticol.css">
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -36,7 +35,7 @@
             $('.dropdown-toggle').dropdown();
         });
     </script>
-    <link rel="icon" href="logofinal.png">
+    <link rel="icon" href="/images/logofinal.png">
 </head>
 <style type="text/css">
     <!--
@@ -65,7 +64,7 @@
                 </ul>
             </li>
             <li><a href="Galerie.html">Galerie foto</a></li>
-            <li><a href="Timeline.html">Despre Noi</a></li>
+            <li><a href="Timeline.php">Despre Noi</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php"><span class="glyphicon glyphicon-user"></span> Contul Meu</a></li>

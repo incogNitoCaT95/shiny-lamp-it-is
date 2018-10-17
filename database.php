@@ -28,9 +28,26 @@ class Database {
      * @return int
      */
     public function saveArticle($title, $content) {
-        $sql = "INSERT INTO `articles` (`title`, `content`) VALUES (?,?)";
-        $stmt= $this->dbh->prepare($sql);
-        $stmt->execute([$title, $content]);
+        global $id;
+
+        $found = false;
+        $articles = $this->getArticles();
+        foreach($articles as $article) {
+            if($article['id'] === $id) {
+                $found = true;
+                break;
+            }
+        }
+
+        if($found) {
+            $sql = "INSERT INTO `articles` (`title`, `content`) VALUES (?,?)";
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->execute([$title, $content]);
+        } else {
+            $sql = "UPDATE `articles` SET `articles`.`title` = ? AND `articles`.`content` = ? WHERE `articles`.`id` = ?";
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->execute([$title, $content, $id]);
+        }
 
         return $stmt->rowCount();
     }

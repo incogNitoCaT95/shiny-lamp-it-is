@@ -1,6 +1,7 @@
 <?php
 require_once 'database.php';
 $articles = $database->getArticles();
+
 ?>
 
 <nav class="navbar navbar-inverse" style="background-color: #720031;">
@@ -14,10 +15,13 @@ $articles = $database->getArticles();
                     <?php foreach ($articles as $article) : ?>
                         <li><a href="/articol.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></li>
                     <?php endforeach; ?>
+                    <?php if($isAdmin) { ?>
+                        <li><a href="/articol.php">Adauga articol</a></li>
+                    <?php } ?>
                 </ul>
             </li>
             <li><a href="Galerie.html">Galerie foto</a></li>
-            <li><a href="/Timeline/timeline.html">Despre Noi</a></li>
+            <li><a href="/Timeline/Timeline.php">Despre Noi</a></li>
             <?php if(isset($articol) && $isAdmin) { ?>
                 <li><a href="articol.php?id=<?= $articol['id'] ?>&delete=1">Sterge</a></li>
             <?php } ?>

@@ -57,10 +57,9 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
     <meta name="description" content="Atestat">
     <meta name="author" content="Olivia&Teodora">
-    <link rel="icon" href="logofinal.png">
+    <link rel="icon" href="/images/logofinal.png">
     <link rel="stylesheet" type="text/css" href="/cursor.css">
     <link rel="stylesheet" type="text/css" href="/sticky-footer.css">
 
