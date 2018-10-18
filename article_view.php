@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bumbişori</title>
+    <title><?= isset($articol['title']) ? $articol['title'] : 'Shiny' ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +47,10 @@
 
 
 <div class="txtbox">
-    <a href="/articol.php?id=<?= $articol['id'] ?>&action=edit" class="btn btn-primary">Editeaza</a>
+    <?php if(isset($articol) && $isAdmin) { ?>
+        <a href="/articol.php?id=<?= $articol['id'] ?>&action=edit" class="btn btn-primary">Editeaza</a>
+        <a href="/articol.php?id=<?= $articol['id'] ?>&action=delete" class="btn btn-danger">Sterge</a>
+    <?php } ?>
 
     <?= $articol['content'] ?>
 </div>

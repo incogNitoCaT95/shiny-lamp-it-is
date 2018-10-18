@@ -4,7 +4,10 @@ require_once 'database.php';
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 $hasArticle = false;
 
-$edit = isset($_GET['action']) && $_GET['action'] === 'edit';
+$action = isset($_GET['action']) ? $_GET['action'] : null;
+
+$edit = $action === 'edit';
+$delete = $action === 'delete';
 
 if (!empty($id)) {
     $articles = $database->getArticles();
@@ -14,15 +17,16 @@ if (!empty($id)) {
         $hasArticle = true;
         unset($articles);
 
-        if (!$edit) {
+        if (!$edit && !$delete) {
             require 'article_view.php';
+            exit;
         }
     }
 }
 
 
 if ($isAdmin) {
-    if (isset($_GET['delete']) && $_GET['delete'] == 1) {
+    if ($delete) {
         if ($database->deleteArticle($id)) { ?>
             <html>
             <head>
@@ -46,7 +50,7 @@ if ($isAdmin) {
         if ($database->saveArticle($title, $content)) { ?>
             <html>
             <head>
-                <meta http-equiv="refresh" content="3;URL='articol.php'"/>
+                <meta http-equiv="refresh" content="3;URL='/'"/>
             </head>
             <body>
             <h3>Articol salvat cu succes. Redirectare in 3 secunde...</h3>

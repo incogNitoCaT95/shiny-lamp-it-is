@@ -39,14 +39,15 @@ class Database {
             }
         }
 
-        if($found) {
+
+        if(!$found) {
             $sql = "INSERT INTO `articles` (`title`, `content`) VALUES (?,?)";
             $stmt = $this->dbh->prepare($sql);
             $stmt->execute([$title, $content]);
         } else {
-            $sql = "UPDATE `articles` SET `articles`.`title` = ? AND `articles`.`content` = ? WHERE `articles`.`id` = ?";
+            $sql = "UPDATE `articles` `a` SET `a`.`title` = ?, `a`.`content` = ? WHERE `a`.`id` = ?";
             $stmt = $this->dbh->prepare($sql);
-            $stmt->execute([$title, $content, $id]);
+            $stmt->execute([$title, $content, (int) $id]);
         }
 
         return $stmt->rowCount();

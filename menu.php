@@ -22,9 +22,7 @@ $articles = $database->getArticles();
             </li>
             <li><a href="Galerie.html">Galerie foto</a></li>
             <li><a href="/Timeline/Timeline.php">Despre Noi</a></li>
-            <?php if(isset($articol) && $isAdmin) { ?>
-                <li><a href="articol.php?id=<?= $articol['id'] ?>&delete=1">Sterge</a></li>
-            <?php } ?>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <?php if (!isset($_SESSION['id'])) { ?>
